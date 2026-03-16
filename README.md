@@ -22,13 +22,13 @@ This project demonstrates a structured SQL data cleaning workflow using a real-w
 
 ### Data Cleaning Steps (with example SQL)
 
--- 1. Create staging table and duplicate data
+### 1. Create staging table and duplicate data
 -- Purpose: Preserve raw data for safe cleaning
 ```sql
 CREATE TABLE layoffs_staging LIKE layoffs;
 INSERT INTO layoffs_staging SELECT * FROM layoffs;
 ```
--- 2. Remove duplicates using ROW_NUMBER()
+### 2. Remove duplicates using ROW_NUMBER()
 -- Purpose: Identify duplicates and delete extra rows
 ```sql
 WITH duplicate_cte AS (
@@ -41,7 +41,7 @@ WITH duplicate_cte AS (
 DELETE FROM duplicate_cte
 WHERE row_id > 1;
 ```
--- 3. Standardize text values
+### 3. Standardize text values
 -- Purpose: Remove extra spaces and unify naming
 ```sql
 UPDATE layoffs_staging
@@ -50,7 +50,7 @@ UPDATE layoffs_staging
 SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%';
 ```
--- 4. Convert date from text to DATE type
+### 4. Convert date from text to DATE type
 -- Purpose: Ensure proper date formatting for analysis
 ```sql
 UPDATE layoffs_staging 
@@ -58,7 +58,7 @@ SET date = STR_TO_DATE(date, '%m/%d/%Y');
 ALTER TABLE layoffs_staging
 MODIFY COLUMN date DATE;
 ```
--- 5. Handle NULLs in industry column
+### 5. Handle NULLs in industry column
 -- Purpose: Populate missing industry values using available company data
 ```sql
 UPDATE layoffs_staging t1
@@ -67,7 +67,7 @@ JOIN layoffs_staging t2
 SET t1.industry = t2.industry
 WHERE t1.industry IS NULL AND t2.industry IS NOT NULL;
 ```
--- 6. Remove rows with missing layoff data
+### 6. Remove rows with missing layoff data
 -- Purpose: Drop rows that provide no useful information
 ```sql
 DELETE FROM layoffs_staging
