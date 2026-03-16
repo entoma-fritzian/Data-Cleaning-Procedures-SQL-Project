@@ -103,5 +103,5 @@ This project is for learning and portfolio purposes only.
 
 ### Author
 Fritz Ian Entoma  
-Aspiring Data Analyst / Virtual Assistant  
+Junior Business Intelligence Analyst / Virtual Assistant  
 GitHub Profile: https://github.com/YOUR-USERNAME
