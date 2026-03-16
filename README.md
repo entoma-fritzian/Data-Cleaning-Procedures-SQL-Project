@@ -18,7 +18,7 @@ This project demonstrates a structured SQL data cleaning workflow using a real-w
 | country                 | TEXT     |
 | funds_raised_millions   | INT      |
 
-✅ Lay-offs dataset available: [layoffs.csv]https://github.com/entoma-fritzian/Data-Cleaning-Procedures-SQL-Project/blob/b9fee6d8c34b13cbb859aa2a8b2e456d98a4f66e/layoffs.csv
+✅ Lay-offs dataset available: [layoffs.csv](https://github.com/entoma-fritzian/Data-Cleaning-Procedures-SQL-Project/blob/b9fee6d8c34b13cbb859aa2a8b2e456d98a4f66e/layoffs.csv)
 
 ### Data Cleaning Steps (with example SQL)
 
