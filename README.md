@@ -71,7 +71,7 @@ WHERE t1.industry IS NULL AND t2.industry IS NOT NULL;
 DELETE FROM layoffs_staging
 WHERE total_laid_off IS NULL AND percentage_laid_off IS NULL;
 ```
-✅ Full SQL script available: [SQL Data Cleaning Layoffs Project Script]
+✅ Full SQL script available: [SQL Data Cleaning Layoffs Project Script](https://github.com/entoma-fritzian/Data-Cleaning-Procedures-SQL-Project/blob/b9c09f7222c034764d4d92d340e37d26402ea3ba/First%20SQL_PROJECT_FINAL_VERSION.sql)
 
 ### Results Preview
 *Example of cleaned dataset (first 5 rows)*
