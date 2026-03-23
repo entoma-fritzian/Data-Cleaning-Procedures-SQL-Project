@@ -30,7 +30,7 @@ FROM layoffs_staging;
 
 -- Insert raw data into staging
 
-INSERT layoffs_staging
+INSERT INTO layoffs_staging
 SELECT *
 FROM layoffs;
 
