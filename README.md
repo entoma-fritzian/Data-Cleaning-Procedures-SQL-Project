@@ -5,6 +5,8 @@
 ### Overview
 This project demonstrates a structured SQL data cleaning workflow using a real-world layoffs dataset from Alex The Analyst GitHub repository. The goal is to prepare raw data for analysis by removing duplicates, standardizing values, fixing data types, and handling missing data using MySQL Workbench. This reflects a real-world workflow where raw data must be cleaned before analysis, reporting, or dashboards.
 
+✅ Final SQL script: [lay-offs dataset final ver. after cleaning](https://github.com/entoma-fritzian/Data-Cleaning-Procedures-SQL-Project/blob/main/First%20SQL_PROJECT_FINAL_VERSION.sql) 
+
 ### Final Data Structure
 | Column Name            | Data Type |
 |-------------------------|----------|
